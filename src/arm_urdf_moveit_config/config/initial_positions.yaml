@@ -1,0 +1,11 @@
+# Default initial positions for ArmPlate's ros2_control fake system
+
+initial_positions:
+  AX_12A_04_1_dof5: -0.512
+  AX_12A_04_2_Revolute_86: 1.5794
+  AX_12A_04_3_Revolute_75: -2.482
+  AX_12A_04_4_Revolute_90: 0
+  Nema_34_v3_dof2: -0.3625
+  STEPPER_MOTOR_dof3: -0.1832
+  firstDOF_final_dof1: 2.3778
+  gcomp1_Revolute_63: 0

@@ -1,0 +1,1271 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="ArmPlate">
+    <link name="base_footprint"/>
+    <link name="base_final">
+    <visual>
+        <geometry>
+        <box size="0.50 0.69 0.07"/> <!-- 690mm × 500mm × 40mm thickness -->
+        </geometry>
+        <origin xyz="0 0 0.02" rpy="0 0 0"/>
+    </visual>
+
+    <collision>
+        <geometry>
+        <box size="0.50 0.69 0.07"/>
+        </geometry>
+        <origin xyz="0 0 0.02" rpy="0 0 0"/>
+    </collision>
+
+    <inertial>
+        <mass value="10"/>
+        <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    </link>
+    <link name="AX_12A_04_4">
+        <inertial>
+            <origin xyz="-0.00389299560507709 0.00013224216867502748 0.000801162865136007" rpy="0.0 -0.0 -4.276423536147513e-50" />
+            <mass value="0.01314562026152729" />
+            <inertia ixx="7.798148950596481e-07" iyy="4.259739822777206e-07" izz="4.405684001001966e-07" ixy="-1.2033371590836085e-08" iyz="2.4764191691208078e-09" ixz="-7.290315424198116e-08" />
+        </inertial>
+        <visual name="AX_12A_04_4_visual">
+            <origin xyz="-0.006265168221770275 0.00021282159302334237 0.00128934642785687" rpy="-1.0366013346838598 -1.163987194212352 1.0391659357227008" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_04_4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_04_4_collision">
+            <origin xyz="-0.006265168221770275 0.00021282159302334237 0.00128934642785687" rpy="-1.0366013346838598 -1.163987194212352 1.0391659357227008" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_04_4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Base_link">
+        <inertial>
+            <origin xyz="6.922493689387466e-10 -1.738392612082862e-09 0.008244362121725857" rpy="0.0 -0.0 0.0" />
+            <mass value="0.35275765809914694" />
+            <inertia ixx="0.0005862481077865966" iyy="0.0005862481077865273" izz="0.0011249806323207247" ixy="-2.6020852139652106e-17" iyz="-4.163336342344337e-17" ixz="-1.3877787807814457e-17" />
+        </inertial>
+        <visual name="Base_link_visual">
+            <origin xyz="0.009916799259923418 -0.17649832214451863 0.009999997829568627" rpy="1.184759700276972e-14 -1.1788180864029286e-14 0.84152551234576" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Base_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Base_link_collision">
+            <origin xyz="0.009916799259923418 -0.17649832214451863 0.009999997829568627" rpy="1.184759700276972e-14 -1.1788180864029286e-14 0.84152551234576" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Base_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component2">
+        <inertial>
+            <origin xyz="0.025001609183646956 -0.029961054642864655 -0.001236537275872891" rpy="0.0 -0.0 0.0" />
+            <mass value="0.18370800000000004" />
+            <inertia ixx="0.00030960566873804857" iyy="0.00030502103637458644" izz="0.00030986172660080885" ixy="2.0334823792843273e-05" iyz="9.014421048588082e-05" ixz="0.0001008769972626992" />
+        </inertial>
+        <visual name="Component2_visual">
+            <origin xyz="-0.12039005231105765 -0.07807713172821647 0.15149404993625484" rpy="-3.141592653589776 0.7523400311771512 -2.412321839140206" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component2_collision">
+            <origin xyz="-0.12039005231105765 -0.07807713172821647 0.15149404993625484" rpy="-3.141592653589776 0.7523400311771512 -2.412321839140206" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Nema_34_v3">
+        <inertial>
+            <origin xyz="0.04242191194772554 -0.03500000217039965 -0.09999960132042532" rpy="0.0 -0.0 0.0" />
+            <mass value="9.888649543929915" />
+            <inertia ixx="0.027554804657208498" iyy="0.04197783239070918" izz="0.023915865050131435" ixy="-1.0923037273041975e-16" iyz="-5.57116793513732e-16" ixz="0.01614026814748193" />
+        </inertial>
+        <visual name="Nema_34_v3_visual">
+            <origin xyz="0.1138303585920071 -0.03500000217039837 -0.17991010958091122" rpy="-6.387883751999415e-15 -0.7292708144495855 1.6801603598715873e-14" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Nema_34_v3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Nema_34_v3_collision">
+            <origin xyz="0.1138303585920071 -0.03500000217039837 -0.17991010958091122" rpy="-6.387883751999415e-15 -0.7292708144495855 1.6801603598715873e-14" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Nema_34_v3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Universal_hub">
+        <inertial>
+            <origin xyz="0.01298121332395283 -2.1704019559365405e-09 0.011600081961212148" rpy="3.5032461608120435e-46 -0.0 -5.254869241218064e-46" />
+            <mass value="0.1950912261774475" />
+            <inertia ixx="4.954241001529912e-05" iyy="4.028396382915918e-05" izz="4.767711342198998e-05" ixy="-1.7347234759768067e-18" iyz="-1.734723475976807e-18" ixz="8.273395671276603e-06" />
+        </inertial>
+        <visual name="Universal_hub_visual">
+            <origin xyz="0.01968543882423132 -2.1704020980450878e-09 0.017591012807919526" rpy="-1.570796326794871 0.8415255123457632 1.860771139370452e-14" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Universal_hub.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Universal_hub_collision">
+            <origin xyz="0.01968543882423132 -2.1704020980450878e-09 0.017591012807919526" rpy="-1.570796326794871 0.8415255123457632 1.860771139370452e-14" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Universal_hub.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="STEPPER_MOTOR">
+        <inertial>
+            <origin xyz="0.05186402440896352 0.04634742750035173 1.0241122029697181e-06" rpy="0.0 -1.7105694144590052e-49 0.0" />
+            <mass value="2.9315335367586077" />
+            <inertia ixx="0.0030409863596678743" iyy="0.0034863288784324764" izz="0.0052489182026138614" ixy="-0.0019727348135728795" iyz="1.8602923967958292e-07" ixz="1.925363543736162e-07" />
+        </inertial>
+        <visual name="STEPPER_MOTOR_visual">
+            <origin xyz="0.0380286889746618 0.03398263135187279 -6.069453917234569e-10" rpy="1.5707963267949143 0.7523400311771558 -0.8415255123453244" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/STEPPER_MOTOR.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="STEPPER_MOTOR_collision">
+            <origin xyz="0.0380286889746618 0.03398263135187279 -6.069453917234569e-10" rpy="1.5707963267949143 0.7523400311771558 -0.8415255123453244" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/STEPPER_MOTOR.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component5">
+        <inertial>
+            <origin xyz="0.038606953515924886 -0.03199215550798499 -0.03449937598611893" rpy="0.0 -0.0 0.0" />
+            <mass value="0.09815073490941714" />
+            <inertia ixx="0.0001150176051005862" iyy="6.259387762541993e-05" izz="0.00010984397895962174" ixy="-1.0482438409548274e-05" iyz="9.367161593229824e-06" ixz="-2.2947265474183153e-05" />
+        </inertial>
+        <visual name="Component5_visual">
+            <origin xyz="-0.17653079845684025 -0.007999997829577908 0.10410512278391515" rpy="1.5707963267949208 -0.8415255123457601 -1.9524113550445354e-14" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component5_collision">
+            <origin xyz="-0.17653079845684025 -0.007999997829577908 0.10410512278391515" rpy="1.5707963267949208 -0.8415255123457601 -1.9524113550445354e-14" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component6">
+        <inertial>
+            <origin xyz="-0.02999690931557911 -0.023511302749904407 -0.03253374188037054" rpy="0.0 -0.0 0.0" />
+            <mass value="0.34610151039850046" />
+            <inertia ixx="0.0023611217040015583" iyy="0.002557605126837676" izz="0.0015227088957860463" ixy="-0.0007532269622932681" iyz="0.0008808797149864475" ixz="0.0010070008535269857" />
+        </inertial>
+        <visual name="Component6_visual">
+            <origin xyz="-0.15580322462008508 -0.0051172791498973426 0.1277660660751984" rpy="-3.141592653589776 0.7523400311771555 -2.412321839140214" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component6.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component6_collision">
+            <origin xyz="-0.15580322462008508 -0.0051172791498973426 0.1277660660751984" rpy="-3.141592653589776 0.7523400311771555 -2.412321839140214" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component6.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component7">
+        <inertial>
+            <origin xyz="-0.06157283527570998 -0.0975316712236101 -0.06740307146968515" rpy="3.5032461608120435e-46 -0.0 5.254869241218064e-46" />
+            <mass value="0.335895985770971" />
+            <inertia ixx="0.002395595477098291" iyy="0.0014337879724278038" izz="0.0022350841903151846" ixy="-0.0008307631225381654" iyz="-0.0009296757804689614" ixz="-0.0007119368522461136" />
+        </inertial>
+        <visual name="Component7_visual">
+            <origin xyz="-0.020198810850103027 0.07067204607519913 0.014915444620086227" rpy="2.2236457154561635 -0.5756743869594574 -0.9521254216581747" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component7.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component7_collision">
+            <origin xyz="-0.020198810850103027 0.07067204607519913 0.014915444620086227" rpy="2.2236457154561635 -0.5756743869594574 -0.9521254216581747" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component7.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Nema34_bracket">
+        <inertial>
+            <origin xyz="-0.031656785308752905 -0.019035929231534895 0.028288667215028873" rpy="0.0 -0.0 0.0" />
+            <mass value="0.6674988555482886" />
+            <inertia ixx="0.001189291293457878" iyy="0.0013155421866584138" izz="0.001189485703267656" ixy="-0.00022712393208892956" iyz="0.0002029591293972246" ixz="8.622914387280964e-07" />
+        </inertial>
+        <visual name="Nema34_bracket_visual">
+            <origin xyz="0.25129639780653934 2.1704223485130568e-09 0.2448227572065949" rpy="1.5707963267949183 0.7292708144491346 1.7154304119914332e-14" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Nema34_bracket.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Nema34_bracket_collision">
+            <origin xyz="0.25129639780653934 2.1704223485130568e-09 0.2448227572065949" rpy="1.5707963267949183 0.7292708144491346 1.7154304119914332e-14" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Nema34_bracket.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Coupler_meccanum_V2">
+        <inertial>
+            <origin xyz="0.0034189581556570304 0.003055195260706363 2.170400392742522e-09" rpy="0.0 2.4892061111444556e-60 -1.7516230804060213e-46" />
+            <mass value="0.12716703676814284" />
+            <inertia ixx="3.9410716603370546e-05" iyy="3.7002895435671326e-05" izz="2.7459436222948913e-05" ixy="1.0679726373755402e-05" iyz="-9.194093707067666e-17" ixz="4.683687042204121e-17" />
+        </inertial>
+        <visual name="Coupler_meccanum_V2_visual">
+            <origin xyz="0.37615657424433724 0.38200402313092113 0.15510294240377484" rpy="-3.1415926535897802 3.736917813420825e-15 0.7292708144491292" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Coupler_meccanum_V2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Coupler_meccanum_V2_collision">
+            <origin xyz="0.37615657424433724 0.38200402313092113 0.15510294240377484" rpy="-3.1415926535897802 3.736917813420825e-15 0.7292708144491292" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Coupler_meccanum_V2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component1_1">
+        <inertial>
+            <origin xyz="-0.031798293334690725 0.023005147902699277 0.05235345441995968" rpy="0.0 -0.0 3.85185988877447e-34" />
+            <mass value="0.9963108875301839" />
+            <inertia ixx="0.0033575284470164224" iyy="0.0031263485900704675" izz="0.0009561370850641742" ixy="0.00011069103722360915" iyz="-0.0008774505042642229" ixz="0.00028994344191095317" />
+        </inertial>
+        <visual name="Component1_1_visual">
+            <origin xyz="-0.05369193358763934 0.05492613220545245 0.13664866131483336" rpy="0.3272616122028199 0.2461309251673559 3.0506831625155817" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component1_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component1_1_collision">
+            <origin xyz="-0.05369193358763934 0.05492613220545245 0.13664866131483336" rpy="0.3272616122028199 0.2461309251673559 3.0506831625155817" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component1_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component12">
+        <inertial>
+            <origin xyz="0.006805049157129517 -0.018202406285507743 0.019502153803174594" rpy="0.0 -0.0 0.0" />
+            <mass value="0.0745637005009865" />
+            <inertia ixx="3.233003644561097e-05" iyy="1.0959975476575876e-05" izz="3.2163111751015556e-05" ixy="-4.011169411404988e-06" iyz="8.016463638050275e-06" ixz="9.717275288052152e-07" />
+        </inertial>
+        <visual name="Component12_visual">
+            <origin xyz="0.017641626412360802 -0.0225269777945482 0.012219171314833447" rpy="0.3272616122028168 0.24613092516735857 3.0506831625155826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component12.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component12_collision">
+            <origin xyz="0.017641626412360802 -0.0225269777945482 0.012219171314833447" rpy="0.3272616122028168 0.24613092516735857 3.0506831625155826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component12.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_03_2">
+        <inertial>
+            <origin xyz="-0.009136904023969699 -0.011286329857341038 0.004615437253159769" rpy="0.0 -0.0 0.0" />
+            <mass value="0.05146118707510322" />
+            <inertia ixx="4.161494661682197e-06" iyy="1.0787936120705211e-05" izz="1.276824369528165e-05" ixy="3.5080829931515716e-07" iyz="1.1643839302032796e-06" ixz="-2.2602473664567685e-06" />
+        </inertial>
+        <visual name="AX_12A_03_2_visual">
+            <origin xyz="0.0038045384497895542 -0.012376371933757149 0.008149433770349504" rpy="-2.8143310413869767 0.24613092516735785 3.0506831625155826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_03_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_03_2_collision">
+            <origin xyz="0.0038045384497895542 -0.012376371933757149 0.008149433770349504" rpy="-2.8143310413869767 0.24613092516735785 3.0506831625155826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_03_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_01_2">
+        <inertial>
+            <origin xyz="-0.0019973544455338657 0.003732705296415659 0.010155017704444873" rpy="0.0 -0.0 -1.540743955509789e-33" />
+            <mass value="0.2099210524614745" />
+            <inertia ixx="2.1845682507896924e-05" iyy="4.721514674613235e-05" izz="4.7970700460624877e-05" ixy="2.108235671626975e-06" iyz="1.5128758565734174e-06" ixz="-6.94286259924834e-06" />
+        </inertial>
+        <visual name="AX_12A_01_2_visual">
+            <origin xyz="0.010108230029042709 0.0026291509750306476 0.013208849267154718" rpy="0.32726161220281447 0.24613092516735788 3.0506831625155826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_01_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_01_2_collision">
+            <origin xyz="0.010108230029042709 0.0026291509750306476 0.013208849267154718" rpy="0.32726161220281447 0.24613092516735788 3.0506831625155826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_01_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_02_2">
+        <inertial>
+            <origin xyz="-0.002601125303984482 -0.0012574304226964372 -0.0024066675538934844" rpy="0.0 -0.0 0.0" />
+            <mass value="0.06044745673942447" />
+            <inertia ixx="4.401439603111956e-06" iyy="1.0614739718403654e-05" izz="1.2946509579604866e-05" ixy="-4.0629404836432093e-07" iyz="1.215950122112653e-06" ixz="1.8722402113724799e-06" />
+        </inertial>
+        <visual name="AX_12A_02_2_visual">
+            <origin xyz="0.012054680318232834 0.0002919502660182616 -0.0054634614250388585" rpy="-2.8143310413869758 -0.24613092516735793 -3.0506831625155826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_02_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_02_2_collision">
+            <origin xyz="0.012054680318232834 0.0002919502660182616 -0.0054634614250388585" rpy="-2.8143310413869758 -0.24613092516735793 -3.0506831625155826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_02_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_03_1">
+        <inertial>
+            <origin xyz="0.005093204951882129 -0.014173901350748822 -0.0023078835356502483" rpy="-6.162975822039155e-33 6.162975822039155e-33 0.0" />
+            <mass value="0.05146118707510322" />
+            <inertia ixx="4.308185377542918e-06" iyy="1.0296666519198253e-05" izz="1.311282258092093e-05" ixy="1.1676914890576882e-06" iyz="-8.824558765143156e-09" ixz="-2.307132253879292e-06" />
+        </inertial>
+        <visual name="AX_12A_03_1_visual">
+            <origin xyz="-0.007754203850565631 -0.011925575474944914 -0.005631642587159611" rpy="0.12847062992638938 -0.22904707436262747 -0.1705178338536626" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_03_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_03_1_collision">
+            <origin xyz="-0.007754203850565631 -0.011925575474944914 -0.005631642587159611" rpy="0.12847062992638938 -0.22904707436262747 -0.1705178338536626" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_03_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_01_1">
+        <inertial>
+            <origin xyz="-0.01067358687202395 0.001004312504908409 -0.002472405563092437" rpy="0.0 -0.0 3.8518598887744726e-34" />
+            <mass value="0.2099210524614745" />
+            <inertia ixx="4.844861837679029e-05" iyy="4.636127369819429e-05" izz="2.2221637639621005e-05" ixy="7.673626158735677e-07" iyz="-4.3744793359924705e-06" ixz="6.6211133018037605e-06" />
+        </inertial>
+        <visual name="AX_12A_01_1_visual">
+            <origin xyz="-0.013519315358341881 0.0030756113543814402 0.009556744252381223" rpy="2.621220246223601 1.2861427560164196 -0.6291818753050178" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_01_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_01_1_collision">
+            <origin xyz="-0.013519315358341881 0.0030756113543814402 0.009556744252381223" rpy="2.621220246223601 1.2861427560164196 -0.6291818753050178" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_01_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_02_1">
+        <inertial>
+            <origin xyz="-0.0025905398308119134 5.8243278887850637e-05 0.002724841964738687" rpy="0.0 -0.0 0.0" />
+            <mass value="0.06044745673942447" />
+            <inertia ixx="1.3301535348906109e-05" iyy="1.0143507007218111e-05" izz="4.517646544989309e-06" ixy="1.095910819762062e-07" iyz="-1.0641759598064603e-06" ixz="-1.9281594049753294e-06" />
+        </inertial>
+        <visual name="AX_12A_02_1_visual">
+            <origin xyz="-0.005366292923772243 -0.0023685086162474355 -0.011867734152310164" rpy="-0.5203724073662063 -1.2861427560164218 0.6291818753050217" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_02_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_02_1_collision">
+            <origin xyz="-0.005366292923772243 -0.0023685086162474355 -0.011867734152310164" rpy="-0.5203724073662063 -1.2861427560164218 0.6291818753050217" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_02_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_04_1">
+        <inertial>
+            <origin xyz="-0.003840994968009923 -0.0003501489724968465 0.0009689536307368485" rpy="0.0 -0.0 0.0" />
+            <mass value="0.01314562026152729" />
+            <inertia ixx="7.704153459435999e-07" iyy="4.284310280433523e-07" izz="4.475109034529981e-07" ixy="3.143680021047657e-08" iyz="-7.930446825166003e-09" ixz="-8.699408001399624e-08" />
+        </inertial>
+        <visual name="AX_12A_04_1_visual">
+            <origin xyz="-0.006181484765937384 -0.000563509809078937 0.0015593804400382538" rpy="-0.5203724073661985 -1.2861427560164216 0.6291818753050216" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_04_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_04_1_collision">
+            <origin xyz="-0.006181484765937384 -0.000563509809078937 0.0015593804400382538" rpy="-0.5203724073661985 -1.2861427560164216 0.6291818753050216" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_04_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component20">
+        <inertial>
+            <origin xyz="0.004927609790053822 0.03827930280376895 -0.005222200421358921" rpy="0.0 -0.0 0.0" />
+            <mass value="0.7481591744560818" />
+            <inertia ixx="0.0006005224395847775" iyy="0.0012469193700884867" izz="0.0013517704673540257" ixy="8.785229382198685e-05" iyz="2.8254184162364328e-05" ixz="-5.3228709401519074e-05" />
+        </inertial>
+        <visual name="Component20_visual">
+            <origin xyz="0.16581779101465915 -0.0021981557147870757 0.03960591129611693" rpy="1.7152642237404072 0.24613092516735632 3.0506831625155817" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component20.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component20_collision">
+            <origin xyz="0.16581779101465915 -0.0021981557147870757 0.03960591129611693" rpy="1.7152642237404072 0.24613092516735632 3.0506831625155817" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component20.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link23">
+        <inertial>
+            <origin xyz="0.006849047683059233 0.10900606063876414 -0.019673558464551846" rpy="0.0 -0.0 0.0" />
+            <mass value="3.5161982043421824" />
+            <inertia ixx="0.025828964078782435" iyy="0.0045532846797036175" izz="0.025786885543715693" ixy="-0.002394753424818128" iyz="0.0025137431834488942" ixz="0.00035584832756257984" />
+        </inertial>
+        <visual name="link23_visual">
+            <origin xyz="-0.010732444070069748 -0.03929246876618407 0.00045436976727621927" rpy="-1.7773552905878593 0.8219445139946592 -0.2786407574587831" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/link23.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="link23_collision">
+            <origin xyz="-0.010732444070069748 -0.03929246876618407 0.00045436976727621927" rpy="-1.7773552905878593 0.8219445139946592 -0.2786407574587831" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/link23.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link24">
+        <inertial>
+            <origin xyz="-0.04334947954619203 0.01543011181243056 0.00958126666209523" rpy="0.0 -0.0 0.0" />
+            <mass value="0.26027589430808484" />
+            <inertia ixx="0.00010486917758259495" iyy="0.00019201098118366844" izz="0.0001092105074577323" ixy="1.0540468653839532e-05" iyz="-1.1825623703522881e-05" ixz="-1.810597469224448e-05" />
+        </inertial>
+        <visual name="link24_visual">
+            <origin xyz="-0.07788663406999576 -0.26830617876619206 0.04814006976734454" rpy="-1.7773552905882204 0.8219445139946583 -0.27864075745878664" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/link24.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="link24_collision">
+            <origin xyz="-0.07788663406999576 -0.26830617876619206 0.04814006976734454" rpy="-1.7773552905882204 0.8219445139946583 -0.27864075745878664" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/link24.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_04_2">
+        <inertial>
+            <origin xyz="-0.0007976825419229528 -0.0013563545959262768 -0.0036522211687452" rpy="0.0 -0.0 0.0" />
+            <mass value="0.01314562026152729" />
+            <inertia ixx="4.404384981600805e-07" iyy="4.685674177286848e-07" izz="7.373513615498845e-07" ixy="2.5289985379310647e-08" iyz="1.1579070521719813e-07" ixz="6.809758042181094e-08" />
+        </inertial>
+        <visual name="AX_12A_04_2_visual">
+            <origin xyz="-0.001283748091946677 -0.002182843181776093 -0.005877682032582641" rpy="-2.814331041386976 -0.24613092516735766 -3.0506831625155826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_04_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_04_2_collision">
+            <origin xyz="-0.001283748091946677 -0.002182843181776093 -0.005877682032582641" rpy="-2.814331041386976 -0.24613092516735766 -3.0506831625155826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_04_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_03_3">
+        <inertial>
+            <origin xyz="0.009497106480939231 0.0024249599157709634 0.009632491631387801" rpy="0.0 -0.0 0.0" />
+            <mass value="0.05146118707510322" />
+            <inertia ixx="7.5581836243157965e-06" iyy="1.3333821674778486e-05" izz="6.825669178569995e-06" ixy="1.2714321052893828e-06" iyz="-1.4228118734834266e-06" ixz="3.2490178054293134e-06" />
+        </inertial>
+        <visual name="AX_12A_03_3_visual">
+            <origin xyz="0.0007238788571480725 0.005217762823350274 0.019450280862884136" rpy="1.3642373630016233 0.8219445139946582 -0.2786407574587861" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_03_3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_03_3_collision">
+            <origin xyz="0.0007238788571480725 0.005217762823350274 0.019450280862884136" rpy="1.3642373630016233 0.8219445139946582 -0.2786407574587861" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_03_3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_01_3">
+        <inertial>
+            <origin xyz="0.0012307825650795935 0.010845971478920316 -0.0013773264659083396" rpy="0.0 -0.0 0.0" />
+            <mass value="0.2099210524614745" />
+            <inertia ixx="3.548287026456863e-05" iyy="4.8991888331958305e-05" izz="3.2556771118071745e-05" ixy="3.6949408524491713e-06" iyz="-4.13486940813515e-06" ixz="1.2978512959836368e-05" />
+        </inertial>
+        <visual name="AX_12A_01_3_visual">
+            <origin xyz="-0.006972900821299355 0.013192908006412206 0.007803107219749634" rpy="-1.777355290588171 0.8219445139946578 -0.2786407574587856" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_01_3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_01_3_collision">
+            <origin xyz="-0.006972900821299355 0.013192908006412206 0.007803107219749634" rpy="-1.777355290588171 0.8219445139946578 -0.2786407574587856" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_01_3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_02_3">
+        <inertial>
+            <origin xyz="0.001727467689261495 -0.002723602248544381 0.001933100103501353" rpy="0.0 -0.0 3.8518598887744726e-34" />
+            <mass value="0.06044745673942447" />
+            <inertia ixx="7.575195167364157e-06" iyy="1.3495105348333005e-05" izz="6.892388385414203e-06" ixy="-1.0119080785021297e-06" iyz="-1.1324107080596178e-06" ixz="-3.0278849304983015e-06" />
+        </inertial>
+        <visual name="AX_12A_02_3_visual">
+            <origin xyz="-0.008197090466994971 -0.004890069650213507 -0.009173059094262932" rpy="1.3642373630016205 -0.8219445139946583 0.2786407574587861" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_02_3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_02_3_collision">
+            <origin xyz="-0.008197090466994971 -0.004890069650213507 -0.009173059094262932" rpy="1.3642373630016205 -0.8219445139946583 0.2786407574587861" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_02_3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_04_3">
+        <inertial>
+            <origin xyz="0.0004961906237520708 -0.003906430380254253 0.0005552632591372486" rpy="0.0 -0.0 0.0" />
+            <mass value="0.01314562026152729" />
+            <inertia ixx="4.3132009060501894e-07" iyy="7.82265139851e-07" izz="4.32772046982631e-07" ixy="-4.5307395022824335e-08" iyz="-5.0701802579132304e-08" ixz="6.440053366670373e-09" />
+        </inertial>
+        <visual name="AX_12A_04_3_visual">
+            <origin xyz="0.0007985400513180707 -0.006286792683496483 0.0008936111376383594" rpy="1.3642373630016231 -0.8219445139946583 0.2786407574587861" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_04_3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_04_3_collision">
+            <origin xyz="0.0007985400513180707 -0.006286792683496483 0.0008936111376383594" rpy="1.3642373630016231 -0.8219445139946583 0.2786407574587861" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_04_3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="gcomp1">
+        <inertial>
+            <origin xyz="-0.004215146334285045 0.007137228099759377 0.031272942104139785" rpy="0.0 -0.0 0.0" />
+            <mass value="0.5163425960125627" />
+            <inertia ixx="0.0006651081984118121" iyy="0.00035963715232933957" izz="0.00046431850831910027" ixy="-1.787218820574822e-05" iyz="0.00010422363060857977" ixz="2.6513701754229926e-05" />
+        </inertial>
+        <visual name="gcomp1_visual">
+            <origin xyz="1.90805344857381e-09 3.1817762646824122e-09 2.0325828842260306e-09" rpy="0.21594254184122602 -0.3475062113931309 -1.6114072042923144" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/gcomp1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="gcomp1_collision">
+            <origin xyz="1.90805344857381e-09 3.1817762646824122e-09 2.0325828842260306e-09" rpy="0.21594254184122602 -0.3475062113931309 -1.6114072042923144" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/gcomp1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_03_4">
+        <inertial>
+            <origin xyz="-0.001923379024484575 -0.01330971994396343 0.004746677562477757" rpy="0.0 -0.0 0.0" />
+            <mass value="0.05146118707510322" />
+            <inertia ixx="1.3275506861837316e-05" iyy="4.780042990738809e-06" izz="9.662124625078178e-06" ixy="1.950018949915985e-06" iyz="2.1387939948382464e-06" ixz="-5.925481933138734e-07" />
+        </inertial>
+        <visual name="AX_12A_03_4_visual">
+            <origin xyz="-0.00489466406109802 -0.00100729820185812 0.0001662691828717655" rpy="-1.606177776901282 -0.34805458651875054 -1.3557619900799638" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_03_4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_03_4_collision">
+            <origin xyz="-0.00489466406109802 -0.00100729820185812 0.0001662691828717655" rpy="-1.606177776901282 -0.34805458651875054 -1.3557619900799638" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_03_4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_01_4">
+        <inertial>
+            <origin xyz="-0.010811680792966492 -0.0002919423744148375 -0.002017245671060621" rpy="0.0 -0.0 0.0" />
+            <mass value="0.2099210524614745" />
+            <inertia ixx="4.883166784684645e-05" iyy="4.392218511638235e-05" izz="2.4277676751279648e-05" ixy="1.9560151929987777e-06" iyz="-8.493351438952634e-06" ixz="5.592131372498394e-06" />
+        </inertial>
+        <visual name="AX_12A_01_4_visual">
+            <origin xyz="-0.013325730451399523 0.003982858311454329 0.009493381081453763" rpy="-1.0366013346838525 1.1639871942123496 -1.03916593572269" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_01_4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_01_4_collision">
+            <origin xyz="-0.013325730451399523 0.003982858311454329 0.009493381081453763" rpy="-1.0366013346838525 1.1639871942123496 -1.03916593572269" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_01_4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="AX_12A_02_4">
+        <inertial>
+            <origin xyz="-0.0026857599006935118 -0.0007997210606489346 -0.0025072230537660544" rpy="0.0 -0.0 0.0" />
+            <mass value="0.06044745673942447" />
+            <inertia ixx="1.3446999161590562e-05" iyy="9.541874552355945e-06" izz="4.973815187157492e-06" ixy="4.468477166523817e-07" iyz="-1.988404643987231e-06" ixz="1.5875169805980303e-06" />
+        </inertial>
+        <visual name="AX_12A_02_4_visual">
+            <origin xyz="-0.0050549499552480625 0.0043507706514777315 0.011435394395409233" rpy="2.1049913189059324 1.1639871942123516 -1.0391659357226988" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_02_4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AX_12A_02_4_collision">
+            <origin xyz="-0.0050549499552480625 0.0043507706514777315 0.011435394395409233" rpy="2.1049913189059324 1.1639871942123516 -1.0391659357226988" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/AX_12A_02_4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Soft_finger_1">
+        <inertial>
+            <origin xyz="-0.007340780951934001 0.033609902115953647 -0.012481996507633611" rpy="0.0 -0.0 0.0" />
+            <mass value="0.23747567603191708" />
+            <inertia ixx="0.00017861576139324703" iyy="5.882327377480086e-05" izz="0.00016767403307467465" ixy="2.748086173905846e-05" iyz="4.6887509728060664e-05" ixz="-1.0224841838324367e-05" />
+        </inertial>
+        <visual name="Soft_finger_1_visual">
+            <origin xyz="-0.015686914328534557 0.0015700353844693637 -0.001206551043084012" rpy="-1.6679852733872538 1.2210208636754962 -1.4591718252944685" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Soft_finger_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Soft_finger_1_collision">
+            <origin xyz="-0.015686914328534557 0.0015700353844693637 -0.001206551043084012" rpy="-1.6679852733872538 1.2210208636754962 -1.4591718252944685" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Soft_finger_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="soft_finger_2">
+        <inertial>
+            <origin xyz="-0.007452221080347812 0.035690369235446155 -0.003158308008147763" rpy="0.0 -0.0 0.0" />
+            <mass value="0.23747567603191708" />
+            <inertia ixx="0.0001784315277573722" iyy="4.271042446636618e-05" izz="0.00018397111601899108" ixy="2.9632141455585008e-05" iyz="1.2600576441493259e-05" ixz="-2.6151397934121713e-06" />
+        </inertial>
+        <visual name="soft_finger_2_visual">
+            <origin xyz="-0.015702141023563387 0.001854279126167242 6.729270839876733e-05" rpy="-1.938580195333724 1.4781785903389544 -1.7341790980125826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/soft_finger_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="soft_finger_2_collision">
+            <origin xyz="-0.015702141023563387 0.001854279126167242 6.729270839876733e-05" rpy="-1.938580195333724 1.4781785903389544 -1.7341790980125826" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/soft_finger_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Spur_Gear_motor">
+        <inertial>
+            <origin xyz="0.0013403630327823634 0.006135263216420093 0.0092917247973827" rpy="0.0 -0.0 3.851859888774473e-34" />
+            <mass value="0.05643249551831146" />
+            <inertia ixx="1.5624314091824264e-05" iyy="1.1880895477621438e-05" izz="9.388679058873296e-06" ixy="-1.3531930089347337e-06" iyz="-3.164650387986466e-06" ixz="-2.1908348980300544e-06" />
+        </inertial>
+        <visual name="Spur_Gear_motor_visual">
+            <origin xyz="-0.003915726502385013 -0.00013301346941680948 -0.0008058375245580152" rpy="1.3548537849597597 0.34750621131647424 1.530185449315362" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Spur_Gear_motor.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Spur_Gear_motor_collision">
+            <origin xyz="-0.003915726502385013 -0.00013301346941680948 -0.0008058375245580152" rpy="1.3548537849597597 0.34750621131647424 1.530185449315362" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Spur_Gear_motor.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Spur_Gear_driven">
+        <inertial>
+            <origin xyz="-0.002747955930765542 0.009735462641907588 -0.0035127185303848664" rpy="0.0 -0.0 0.0" />
+            <mass value="0.05643249551831146" />
+            <inertia ixx="1.5688908190095857e-05" iyy="8.00566270373667e-06" izz="1.3199317734496896e-05" ixy="-2.3590247200475775e-06" iyz="2.2736785074556347e-06" ixz="6.286005120284727e-07" />
+        </inertial>
+        <visual name="Spur_Gear_driven_visual">
+            <origin xyz="-0.007831452352418644 -0.001611682846294329 0.0002660230667603969" rpy="-1.9385801953337571 1.478178590338957 -1.7341790980125922" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Spur_Gear_driven.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Spur_Gear_driven_collision">
+            <origin xyz="-0.007831452352418644 -0.001611682846294329 0.0002660230667603969" rpy="-1.9385801953337571 1.478178590338957 -1.7341790980125922" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Spur_Gear_driven.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="firstDOF_final">
+        <inertial>
+            <origin xyz="-0.19987486281190667 0.06433768667547227 -0.3370868422624306" rpy="0.0 -0.0 0.0" />
+            <mass value="15.570881668123175" />
+            <inertia ixx="0.7748367520109403" iyy="1.0816788311789978" izz="0.326897483603541" ixy="-2.5646573351523154e-05" iyz="0.0004276961517794564" ixz="-0.00022697660179156476" />
+        </inertial>
+        <visual name="firstDOF_final_visual">
+            <origin xyz="-0.19999999930779613 0.07499999782957226 -0.39999999826160415" rpy="1.9145625986057796e-14 -1.8318679906323985e-15 3.918393102589083e-16" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/firstDOF_final.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="firstDOF_final_collision">
+            <origin xyz="-0.19999999930779613 0.07499999782957226 -0.39999999826160415" rpy="1.9145625986057796e-14 -1.8318679906323985e-15 3.918393102589083e-16" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/firstDOF_final.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- === WHEEL PARAMETERS === -->
+
+    <!-- Wheel positions (mounted on the shorter 500mm side => y direction) -->
+    <!-- Half-width = 0.25 m / 250mm -->
+    <!-- Half-length = 0.345 m / 345mm -->
+
+    <!-- FRONT RIGHT WHEEL -->
+    <joint name="wheel_fr_joint" type="fixed">
+    <parent link="base_final"/>
+    <child link="wheel_fr_link"/>
+    <origin xyz="0.28 -0.29 -0.02" rpy="0 1.5708 0"/>
+    <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="wheel_fr_link">
+    <visual>
+        <geometry>
+        <cylinder radius="0.075" length="0.04"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+
+    <collision>
+        <geometry>
+        <cylinder radius="0.075" length="0.04"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+
+        <surface>
+        <friction>
+            <ode>
+            <!-- higher mu reduces slipping; tune if robot sticks too much -->
+            <mu>2.0</mu>
+            <mu2>2.0</mu2>
+
+            </ode>
+        </friction>
+        </surface>
+    </collision>
+
+    <inertial>
+        <mass value="1"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    </link>
+
+
+    <!-- FRONT LEFT WHEEL -->
+    <joint name="wheel_fl_joint" type="fixed">
+    <parent link="base_final"/>
+    <child link="wheel_fl_link"/>
+    <origin xyz="0.28 0.29 -0.02" rpy="0 1.5708 0"/>
+    <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="wheel_fl_link">
+    <visual>
+        <geometry>
+        <cylinder radius="0.075" length="0.04"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+        <geometry>
+        <cylinder radius="0.075" length="0.04"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <surface>
+        <friction>
+            <ode>
+            <!-- higher mu reduces slipping; tune if robot sticks too much -->
+            <mu>2.0</mu>
+            <mu2>2.0</mu2>
+
+            </ode>
+        </friction>
+        </surface>
+    </collision>
+    <inertial>
+        <mass value="1"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    </link>
+
+
+    <!-- REAR RIGHT WHEEL -->
+    <joint name="wheel_rr_joint" type="fixed">
+    <parent link="base_final"/>
+    <child link="wheel_rr_link"/>
+    <origin xyz="-0.28 -0.29 -0.02" rpy="0 1.5708 0"/>
+    <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="wheel_rr_link">
+    <visual>
+        <geometry>
+        <cylinder radius="0.075" length="0.04"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+        <geometry>
+        <cylinder radius="0.075" length="0.04"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <surface>
+        <friction>
+            <ode>
+            <!-- higher mu reduces slipping; tune if robot sticks too much -->
+            <mu>2.0</mu>
+            <mu2>2.0</mu2>
+            </ode>
+        </friction>
+        </surface>
+    </collision>
+    <inertial>
+        <mass value="1"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    </link>
+
+
+    <!-- REAR LEFT WHEEL -->
+    <joint name="wheel_rl_joint" type="fixed">
+    <parent link="base_final"/>
+    <child link="wheel_rl_link"/>
+    <origin xyz="-0.28 0.29 -0.02" rpy="0 1.5708 0"/>
+    <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="wheel_rl_link">
+    <visual>
+        <geometry>
+        <cylinder radius="0.075" length="0.04"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+        <geometry>
+        <cylinder radius="0.075" length="0.04"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <surface>
+        <friction>
+            <ode>
+            <!-- higher mu reduces slipping; tune if robot sticks too much -->
+            <mu>2.0</mu>
+            <mu2>2.0</mu2>
+            </ode>
+        </friction>
+        </surface>
+    </collision>
+    <inertial>
+        <mass value="1"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    </link>
+
+    <link name="ZED2i-v1">
+        <inertial>
+            <origin xyz="0.01981965658344997 0.008318772992551331 -0.002211234456782627" rpy="0.0 -2.3492494595910933e-65 0.0" />
+            <mass value="1.3163395126511606" />
+            <inertia ixx="0.0030201928676936163" iyy="0.0027530174408516572" izz="0.0005884697700934138" ixy="2.4047102118146806e-05" iyz="-0.0009040278979763893" ixz="0.00010355121830082907" />
+        </inertial>
+        <visual name="ZED2i-v1_visual">
+            <origin xyz="-0.012024532593920547 0.0013280275191779368 -0.010516562974810987" rpy="3.0444037070181036 1.2210208635982025 -1.4591718252479167" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/ZED2i-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="ZED2i-v1_collision">
+            <origin xyz="-0.012024532593920547 0.0013280275191779368 -0.010516562974810987" rpy="3.0444037070181036 1.2210208635982025 -1.4591718252479167" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/ZED2i-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="lidarmount-v1">
+        <inertial>
+            <origin xyz="-6.897899766666882e-07 -0.028752539252220117 0.04366443546111668" rpy="0.0 -0.0 0.0" />
+            <mass value="1.897650188868586" />
+            <inertia ixx="0.0028950680725520206" iyy="0.0036522739190869014" izz="0.0011968333905195694" ixy="-6.757740977914053e-09" iyz="0.000451991737843494" ixz="6.04762877345899e-08" />
+        </inertial>
+        <visual name="lidarmount-v1_visual">
+            <origin xyz="6.922012030230462e-10 -2.1704435226865827e-09 0.222115133056962" rpy="-1.57079632679486 -1.8318679906324107e-15 7.077671781985395e-16" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/lidarmount-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="lidarmount-v1_collision">
+            <origin xyz="6.922012030230462e-10 -2.1704435226865827e-09 0.222115133056962" rpy="-1.57079632679486 -1.8318679906324107e-15 7.077671781985395e-16" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/lidarmount-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="LIDAR_2-v1">
+        <inertial>
+            <origin xyz="6.922017448118822e-10 -0.012114501356849558 1.2195409982425077e-05" rpy="0.0 -0.0 0.0" />
+            <mass value="0.8457268503421936" />
+            <inertia ixx="0.00033503989135647005" iyy="0.0005857746070060121" izz="0.0003353442363105419" ixy="-4.5579661516735076e-39" iyz="-9.244653650930523e-08" ixz="3.3052489340346436e-35" />
+        </inertial>
+        <visual name="LIDAR_2-v1_visual">
+            <origin xyz="6.922017625754507e-10 -2.1704389752130738e-09 1.7383920436486732e-09" rpy="-3.1415926535897567 -1.8318679906315063e-15 7.077671781985395e-16" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/LIDAR_2-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="LIDAR_2-v1_collision">
+            <origin xyz="6.922017625754507e-10 -2.1704389752130738e-09 1.7383920436486732e-09" rpy="-3.1415926535897567 -1.8318679906315063e-15 7.077671781985395e-16" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/LIDAR_2-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="LIDAR_1-v1">
+        <inertial>
+            <origin xyz="0.00015079695701527562 -0.0028742117347356102 0.012758280113072047" rpy="0.0 -0.0 0.0" />
+            <mass value="0.43434032419205015" />
+            <inertia ixx="0.00013912154100359508" iyy="0.00014163139275033543" izz="0.00025880012604038993" ixy="-3.784383758448362e-07" iyz="-1.9810399694009106e-06" ixz="9.646753421944931e-08" />
+        </inertial>
+        <visual name="LIDAR_1-v1_visual">
+            <origin xyz="6.922016115851193e-10 1.7383916173230318e-09 2.1704389752130738e-09" rpy="1.5707963267948601 3.435623389917851e-16 -3.112726210145688" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/LIDAR_1-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="LIDAR_1-v1_collision">
+            <origin xyz="6.922016115851193e-10 1.7383916173230318e-09 2.1704389752130738e-09" rpy="1.5707963267948601 3.435623389917851e-16 -3.112726210145688" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/LIDAR_1-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component65">
+        <inertial>
+            <origin xyz="0.0014683982228239501 -0.0003021909430026426 4.988279411083596e-05" rpy="0.0 -0.0 0.0" />
+            <mass value="0.012264690049407733" />
+            <inertia ixx="6.067170983800692e-06" iyy="1.2780044005822853e-06" izz="5.284132744568307e-06" ixy="-1.0933853790944927e-06" iyz="1.7297200135136645e-06" ixz="3.906623303690586e-07" />
+        </inertial>
+        <visual name="Component65_visual">
+            <origin xyz="1.1760089790868733e-10 -5.317033924256976e-10 3.3404636212708284e-09" rpy="1.2225409675362877 -0.03325910044980967 -0.20296234483984224" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component65.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component65_collision">
+            <origin xyz="1.1760089790868733e-10 -5.317033924256976e-10 3.3404636212708284e-09" rpy="1.2225409675362877 -0.03325910044980967 -0.20296234483984224" />
+            <geometry>
+                <mesh filename="file://$(find arm_urdf)/meshes/Component65.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    
+    <gazebo>
+    <plugin name="planar_move" filename="libgazebo_ros_planar_move.so">
+        <ros>
+        <namespace>/</namespace>
+        </ros>
+        <body_name>base_footprint</body_name>
+        <command_topic>cmd_vel</command_topic>
+        <odometry_topic>odom</odometry_topic>
+        <odometry_frame>odom</odometry_frame>
+        <robot_base_frame>base_footprint</robot_base_frame>
+    </plugin>
+    </gazebo>
+<gazebo reference="LIDAR_1-v1">
+    <sensor name="hls_lfcd_lds" type="ray">
+    <always_on>true</always_on>
+    <visualize>true</visualize>
+    <pose>-0.032 0 0.171 0 0 0</pose>
+    <update_rate>5</update_rate>
+    <ray>
+        <scan>
+        <horizontal>
+            <samples>360</samples>
+            <resolution>1.000000</resolution>
+            <min_angle>0.000000</min_angle>
+            <max_angle>-3.14</max_angle>
+        </horizontal>
+        </scan>
+        <range>
+        <min>0.120000</min>
+        <max>3.5</max>
+        <resolution>0.015000</resolution>
+        </range>
+        <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+        </noise>
+    </ray>
+
+    <plugin name="ray_sensor" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+        <!-- <namespace>/tb3</namespace> -->
+        <remapping>~/out:=scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+      <frame_name>LIDAR_1-v1</frame_name>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<link name="grasp_frame">
+</link>
+
+
+    <joint name="grasp_to_hand" type= "fixed">
+    <origin xyz="-0.04 0.06 0.15" rpy="0.65 -3.4 0" />
+    <parent link="gcomp1" />
+    <child link="grasp_frame" />
+    </joint>
+
+    <joint name="base_to_robot" type="fixed">
+        <origin xyz="0.0 0.0 0.1" rpy= "0.0 0.0 1.57079" />
+        <parent link="base_footprint" />
+        <child link="base_final" />
+    </joint>
+
+    <joint name="link23_Rigid_47" type="fixed">
+        <origin xyz="0.06715419000000004 0.22901371 -0.04768569999999997" rpy="-1.3877787807814457e-17 -0.0 -5.551115123125783e-17" />
+        <parent link="link23" />
+        <child link="link24" />
+    </joint>
+    <joint name="AX_12A_03_3_Rigid_48" type="fixed">
+        <origin xyz="0.009544829999999997 0.005239249999999993 0.009579090000000044" rpy="4.1633363423443364e-17 -2.311115933264683e-33 1.6653345369377348e-16" />
+        <parent link="AX_12A_03_3" />
+        <child link="AX_12A_01_3" />
+    </joint>
+    <joint name="AX_12A_01_3_Rigid_49" type="fixed">
+        <origin xyz="0.002744969999999967 0.021610860000000003 -0.0030718000000000247" rpy="3.141592653589793 -2.775557561562892e-17 -1.1102230246251568e-16" />
+        <parent link="AX_12A_01_3" />
+        <child link="AX_12A_02_3" />
+    </joint>
+    <joint name="AX_12A_02_3_Rigid_50" type="fixed">
+        <origin xyz="-0.008165900000000014 -0.00513564999999999 -0.009138149999999961" rpy="-4.622231866529366e-33 -2.7755575615628914e-17 -1.1102230246251568e-16" />
+        <parent link="AX_12A_02_3" />
+        <child link="AX_12A_04_3" />
+    </joint>
+    <joint name="link23_Rigid_51" type="fixed">
+        <origin xyz="0.020672340000000063 0.20843504 -0.05494989" rpy="-1.3877787807814457e-17 -0.0 -5.551115123125783e-17" />
+        <parent link="link23" />
+        <child link="AX_12A_03_3" />
+    </joint>
+    <joint name="AX_12A_03_4_Rigid_56" type="fixed">
+        <origin xyz="-0.00473436999999997 -0.013449990000000014 0.004683309999999992" rpy="-1.5707963267948966 6.938893903907228e-17 1.925929944387236e-33" />
+        <parent link="AX_12A_03_4" />
+        <child link="AX_12A_01_4" />
+    </joint>
+    <joint name="AX_12A_01_4_Rigid_57" type="fixed">
+        <origin xyz="-0.021536510000000002 -0.0007315600000000089 -0.004432130000000001" rpy="0.0 -0.0 -1.6653345369377348e-16" />
+        <parent link="AX_12A_01_4" />
+        <child link="AX_12A_02_4" />
+    </joint>
+    <joint name="AX_12A_02_4_Rigid_58" type="fixed">
+        <origin xyz="-0.005299680000000002 0.004342459999999981 0.01138503" rpy="3.141592653589793 2.7755575615628907e-17 1.6653345369377348e-16" />
+        <parent link="AX_12A_02_4" />
+        <child link="AX_12A_04_4" />
+    </joint>
+    <joint name="Spur_Gear_motor_Rigid_62" type="fixed">
+        <origin xyz="0.009869839999999996 0.01396018999999999 0.024192779999999987" rpy="1.5707963267948957 2.775557561562892e-17 -5.551115123125784e-17" />
+        <parent link="Spur_Gear_motor" />
+        <child link="Soft_finger_1" />
+    </joint>
+    <joint name="gcomp1_Revolute_63" type="continuous">
+        <origin xyz="-0.03137733000000001 -0.0007477099999999837 0.053316400000000076" rpy="1.5707963267948966 -0.0 -1.3877787807814454e-17" />
+        <parent link="gcomp1" />
+        <child link="Spur_Gear_driven" />
+        <axis xyz="0.978932 0.20146000000000006 -0.033252999999999935" />
+        <limit lower="-1000" upper="1000" effort="10" velocity="10"/>
+    </joint>
+    <joint name="Spur_Gear_driven_Rigid_64" type="fixed">
+        <origin xyz="0.005598460000000003 0.026117649999999985 -0.007753489999999985" rpy="7.222237291452134e-34 1.3877787807814457e-17 3.469446951953615e-18" />
+        <parent link="Spur_Gear_driven" />
+        <child link="soft_finger_2" />
+    </joint>
+    <joint name="Component5_Rigid_72" type="fixed">
+        <origin xyz="0.036537360000000005 -0.05550000000000004 -0.03264998000000006" rpy="-1.5707963267948966 -4.733165431326071e-30 5.5511151231257815e-17" />
+        <parent link="Component5" />
+        <child link="Coupler_meccanum_V2" />
+    </joint>
+    <joint name="Component6_Rigid_73" type="fixed">
+        <origin xyz="0.036473270000000044 0.03259271000000002 -0.12542893000000008" rpy="-5.551115123125784e-17 -5.551115123125783e-17 -1.5707963267948966" />
+        <parent link="Component6" />
+        <child link="STEPPER_MOTOR" />
+    </joint>
+    <joint name="STEPPER_MOTOR_dof3" type="revolute">
+        <origin xyz="-0.020132830000000015 -0.017990800000000036 0.0" rpy="-1.5707963267948968 -0.0 5.551115123125783e-17" />
+        <parent link="STEPPER_MOTOR" />
+        <child link="link23" />
+        <axis xyz="0.74566 -8.278489005419942e-17 0.666326" />
+        <limit lower="-0.632" upper="2.34" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="AX_12A_04_3_Revolute_75" type="continuous">
+        <origin xyz="0.0007985400000000098 -0.00628679 0.0008936099999999669" rpy="-3.141592653589793 -0.0 1.1102230246251563e-16" />
+        <parent link="AX_12A_04_3" />
+        <child link="Component20" />
+        <axis xyz="-0.12477199999999994 -0.982312 0.139627" />
+    </joint>
+    <joint name="AX_12A_03_1_Rigid_76" type="fixed">
+        <origin xyz="0.005331799999999945 -0.013853849999999994 -0.005094639999999995" rpy="1.3877787807814457e-17 -1.5707963267948966 0" />
+        <parent link="AX_12A_03_1" />
+        <child link="AX_12A_01_1" />
+    </joint>
+    <joint name="AX_12A_01_1_Rigid_77" type="fixed">
+        <origin xyz="-0.021248859999999984 0.0019370699999999809 -0.005360370000000003" rpy="-3.141592653589793 5.551115123125784e-17 -2.7755575615628914e-17" />
+        <parent link="AX_12A_01_1" />
+        <child link="AX_12A_02_1" />
+    </joint>
+    <joint name="AX_12A_02_1_Rigid_78" type="fixed">
+        <origin xyz="-0.005607760000000006 -0.0023905199999999737 -0.011806819999999973" rpy="2.7755575615628914e-17 2.775557561562892e-17 1.9259299443872363e-34" />
+        <parent link="AX_12A_02_1" />
+        <child link="AX_12A_04_1" />
+    </joint>
+    <joint name="Component20_Rigid_79" type="fixed">
+        <origin xyz="0.053788199999999994 0.07023747000000001 0.005058649999999929" rpy="-5.551115123125783e-17 1.5707963267948966 0" />
+        <parent link="Component20" />
+        <child link="AX_12A_03_1" />
+    </joint>
+    <joint name="AX_12A_04_1_dof5" type="revolute">
+        <origin xyz="-0.006181480000000015 -0.000563509999999976 0.0015593799999999902" rpy="3.141592653589793 -2.7755575615628907e-17 2.7755575615628907e-17" />
+        <parent link="AX_12A_04_1" />
+        <child link="Component1_1" />
+        <axis xyz="0.965857 -0.08804800000000002 0.24365300000000006" />
+        <limit lower="-2.872" upper="0.246" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Component1_1_Rigid_81" type="fixed">
+        <origin xyz="-0.07133355999999999 0.07745310999999998 0.12442948999999999" rpy="6.9388939039072276e-18 -0.0 2.7755575615628907e-17" />
+        <parent link="Component1_1" />
+        <child link="Component12" />
+    </joint>
+    <joint name="AX_12A_03_2_Rigid_82" type="fixed">
+        <origin xyz="-0.00925307 -0.010379069999999971 0.007277910000000034" rpy="-7.703719777548941e-34 -0.0 -1.3877787807814454e-17" />
+        <parent link="AX_12A_03_2" />
+        <child link="AX_12A_01_2" />
+    </joint>
+    <joint name="AX_12A_01_2_Rigid_83" type="fixed">
+        <origin xyz="-0.0044128999999999505 0.007503530000000005 0.02020454000000001" rpy="3.141592653589793 2.7755575615628914e-17 -3.081487911019578e-33" />
+        <parent link="AX_12A_01_2" />
+        <child link="AX_12A_02_2" />
+    </joint>
+    <joint name="AX_12A_02_2_Rigid_84" type="fixed">
+        <origin xyz="0.012004529999999996 0.00020668000000000574 -0.005693060000000046" rpy="1.232595164407831e-32 2.7755575615628914e-17 -1.3877787807814457e-17" />
+        <parent link="AX_12A_02_2" />
+        <child link="AX_12A_04_2" />
+    </joint>
+    <joint name="Component1_1_Rigid_85" type="fixed">
+        <origin xyz="-0.045330569999999994 0.062158649999999975 0.11945591" rpy="6.9388939039072276e-18 -0.0 2.7755575615628907e-17" />
+        <parent link="Component1_1" />
+        <child link="AX_12A_03_2" />
+    </joint>
+    <joint name="AX_12A_04_2_Revolute_86" type="continuous">
+        <origin xyz="-0.0012837499999999835 -0.00218283999999997 -0.005877679999999969" rpy="-3.141592653589793 2.7755575615628914e-17 -1.5407439555097883e-33" />
+        <parent link="AX_12A_04_2" />
+        <child link="gcomp1" />
+        <axis xyz="0.20058599999999993 -0.34107 -0.9183879999999999" />
+    </joint>
+    <joint name="Base_link_Rigid_87" type="fixed">
+        <origin xyz="0.0 0.0 0.013999999999999986" rpy="-1.5707963267948966 3.292102063402116e-32 -3.1554436208840472e-30" />
+        <parent link="Base_link" />
+        <child link="Component5" />
+    </joint>
+    <joint name="gcomp1_Rigid_89" type="fixed">
+        <origin xyz="0.004262510000000006 0.03428883000000003 0.04808438000000009" rpy="1.5707963267948966 -0.0 -1.3877787807814454e-17" />
+        <parent link="gcomp1" />
+        <child link="AX_12A_03_4" />
+    </joint>
+    <joint name="AX_12A_04_4_Revolute_90" type="continuous">
+        <origin xyz="-0.006265169999999998 0.00021281999999999356 0.0012893499999999847" rpy="3.141592653589793 5.551115123125784e-17 -1.2325951644078312e-32" />
+        <parent link="AX_12A_04_4" />
+        <child link="Spur_Gear_motor" />
+        <axis xyz="0.9789319999999998 0.033252999999999935 0.20145999999999997" />
+        <limit lower="-1000" upper="1000" effort="10" velocity="10"/>
+    </joint>
+    <joint name="Base_link_Rigid_91" type="fixed">
+        <origin xyz="0.0 0.0 0.013999999999999986" rpy="-1.5707963267948966 3.292102063402116e-32 -3.1554436208840472e-30" />
+        <parent link="Base_link" />
+        <child link="Nema34_bracket" />
+    </joint>
+    <joint name="Nema34_bracket_Rigid_92" type="fixed">
+        <origin xyz="-0.03204388 -0.09050000000000001 0.07557282999999998" rpy="-3.141592653589793 -1.5707963267948966 0" />
+        <parent link="Nema34_bracket" />
+        <child link="Nema_34_v3" />
+    </joint>
+    <joint name="Nema_34_v3_Rigid_93" type="fixed">
+        <origin xyz="-0.028763419999999977 -0.03499999999999997 -0.020338770000000003" rpy="3.143117669239969e-30 -1.5707963267948966 0" />
+        <parent link="Nema_34_v3" />
+        <child link="Universal_hub" />
+    </joint>
+    <joint name="Nema_34_v3_dof2" type="revolute">
+        <origin xyz="-0.04875321 -0.03499999999999997 0.00203104999999999" rpy="-3.141592653589793 -1.5707963267948966 0" />
+        <parent link="Nema_34_v3" />
+        <child link="Component7" />
+        <axis xyz="0.7456599999999998 -1.3016110272838068e-30 -0.666326" />
+        <limit lower="-2.320" upper="0.743" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="Component7_Rigid_95" type="fixed">
+        <origin xyz="-0.08347761000000001 -0.057094019999999975 -0.08891434999999995" rpy="-1.5707963267948966 1.5707963267948966 0" />
+        <parent link="Component7" />
+        <child link="Component2" />
+    </joint>
+    <joint name="Component2_Rigid_96" type="fixed">
+        <origin xyz="0.05197343 -0.05816151999999999 0.0" rpy="-5.551115123125783e-17 -1.665334536937735e-16 5.5511151231257815e-17" />
+        <parent link="Component2" />
+        <child link="Component6" />
+    </joint>
+    <joint name="firstDOF_final_dof1" type="continuous">
+        <origin xyz="-0.284 0.08 -0.13499999999999998" rpy="-1.5707963267948963 5.767812750005101e-32 3.2921020634021173e-32" />
+        <parent link="firstDOF_final" />
+        <child link="Base_link" />
+        <axis xyz="-3.292102063402116e-32 0.0 -1.0" />
+    </joint>
+    <joint name="base_final-v4_Rigid_114" type="fixed">
+        <origin xyz="0.19999999930779843 -0.33488217752185967 0.055026915916129582" rpy="1.5707963267948595 -3.608224830031077e-16 1.831867990632383e-15" />
+        <parent link="base_final" />
+        <child link="firstDOF_final" />
+    </joint>
+    <joint name="gcomp1_Rigid-119" type="fixed">
+        <origin xyz="0.016369260000000024 0.006122180000000021 0.018723420000000105" rpy="1.5707963267948966 3.6252798953171506e-33 1.1673668567749808e-16" />
+        <parent link="gcomp1" />
+        <child link="ZED2i-v1" />
+    </joint>
+    <joint name="base_final-v4_Rigid-120" type="fixed">
+        <origin xyz="-0.010000000692201621 -0.3348821775218602 0.005497308408387113" rpy="1.5707963267948595 -3.608224830031077e-16 1.831867990632383e-15" />
+        <parent link="base_final" />
+        <child link="lidarmount-v1" />
+    </joint>
+    <joint name="lidarmount-v1_Rigid-122" type="fixed">
+        <origin xyz="0.0 -0.043999999999999984 0.09" rpy="2.220446049250376e-16 8.374320956528172e-33 1.8594727883077616e-48" />
+        <parent link="lidarmount-v1" />
+        <child link="LIDAR_2-v1" />
+    </joint>
+    <joint name="LIDAR_2-v1_Revolute-123" type="fixed">
+        <origin xyz="0.0 -0.018599999999999995 0.0" rpy="-1.5707963267948966 4.9303806543522854e-32 4.9303806576178713e-32" />
+        <parent link="LIDAR_2-v1" />
+        <child link="LIDAR_1-v1" />
+        <axis xyz="-4.9303806576178713e-32 0.0 1.0" />
+    </joint>
+    <joint name="ZED2i-v1_Rigid-127" type="fixed">
+        <origin xyz="0.03882342000000001 0.012406499999999952 -0.0029198799999999993" rpy="3.141592653589793 -1.167366856774981e-16 5.551115123125784e-17" />
+        <parent link="ZED2i-v1" />
+        <child link="Component65" />
+    </joint>
+</robot>

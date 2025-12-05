@@ -1,0 +1,25 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - arm_controller
+    - hand_controller
+
+  arm_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    joints:
+      - firstDOF_final_dof1
+      - Nema_34_v3_dof2
+      - STEPPER_MOTOR_dof3
+      - AX_12A_04_3_Revolute_75
+      - AX_12A_04_1_dof5
+      - AX_12A_04_2_Revolute_86
+  hand_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    joints:
+      - gcomp1_Revolute_63
+      - AX_12A_04_4_Revolute_90
