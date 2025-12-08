@@ -7,10 +7,26 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 install(DIRECTORY  rcup_objects world config launch meshes urdf DESTINATION share/${PROJECT_NAME}/)
+
+add_executable(joint_state_serial src/send_joint.cpp)
+
+ament_target_dependencies(joint_state_serial
+  rclcpp
+  sensor_msgs
+)
+
+install(
+  TARGETS joint_state_serial
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
